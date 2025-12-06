@@ -1,0 +1,222 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  color: #fff;
+  /* Fondo azul suave */
+  background: linear-gradient(180deg,#0b3d91 0%, #1976d2 100%);
+  font-size: 16px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+.nav h1 {
+  font-size: 1.3rem;
+  color: #333;
+}
+.nav .btn {
+  margin-left: 8px;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(180deg,#ff9f3f 0%, #ff6f00 100%); /* naranja */
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 18px 24px; /* más grandes */
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.22rem;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  /* Se eliminan efectos hover/transform para cumplir petición */
+}
+.btn:focus{ outline:3px solid rgba(255,167,38,0.18); outline-offset:3px }
+
+.btn.primary {
+  background: linear-gradient(180deg,#ff8a00 0%, #ff6f00 100%);
+  color: #fff;
+  border: none;
+  padding: 20px 26px;
+  font-size: 1.28rem;
+  box-shadow: 0 10px 20px rgba(255,111,0,0.18);
+}
+
+.btn.secondary {
+  background: linear-gradient(180deg,#ffd36b 0%, #ffb74d 100%);
+  color: #3a2b00;
+  border: none;
+  padding: 18px 22px;
+  font-weight:600;
+}
+
+.btn.large {
+  padding: 22px 32px;
+  font-size: 1.4rem;
+}
+
+.message {
+  padding: 10px 16px;
+  margin: 12px 20px;
+  border-radius: 6px;
+  min-height: 2em;
+}
+
+.forms {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.form {
+  background: #2c59eb;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 320px;
+}
+.form.hidden {
+  display: none;
+}
+.form h2 {
+  margin-bottom: 10px;
+}
+.form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.showpass {
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+.hero {
+  height: 320px;
+  background-image: url("descargap.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+.hero-content {
+  background: rgba(240, 127, 127, 0.85);
+  margin: 0 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+.hero h2 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.products-section {
+  padding: 20px;
+}
+.products {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.card img {
+  max-width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.card h4 {
+  margin-top: 10px;
+}
+.price {
+  color: #2b8aef;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.footer {
+  text-align: center;
+  padding: 14px;
+  margin-top: 20px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .products {
+    flex-direction: column;
+  }
+  .forms {
+    flex-direction: column;
+  }
+  .hero {
+    height: 260px;
+  }
+}
+
+/* Mobile: ajustar fondo, tipografía, flexbox y botones */
+@media (max-width: 480px) {
+  body {
+    background: linear-gradient(180deg,#ffffff 0%, #f0f8ff 100%);
+    font-size: 14px;
+  }
+  .nav{padding:10px}
+  .nav h1{font-size:1.1rem}
+  .btn{padding:14px 18px;font-size:1.15rem;border-radius:10px}
+  .btn.primary{padding:16px 20px}
+  .forms{padding:12px;gap:12px}
+  .form{width:100%}
+  .hero{height:220px}
+  .hero-content{margin:0 12px;padding:14px}
+  .products{flex-direction:column}
+  .card img{height:200px}
+}
+
+/* Tablet: más legible, botones más grandes y columnas ajustadas */
+@media (min-width: 481px) and (max-width: 900px){
+  body{background: linear-gradient(180deg,#f9fbff 0%, #ffffff 100%);font-size:15px}
+  .btn{padding:12px 16px;font-size:1.12rem}
+  .forms{gap:16px}
+  .form{width:48%}
+  .products{gap:14px}
+  .card{flex:1 1 240px}
+  .card img{height:180px}
+}
+
+/* Desktop grande: mejorar espaciado y mayor tipografía */
+@media (min-width: 1200px){
+  body{font-size:18px;background: linear-gradient(180deg,#f3f7ff 0%, #ffffff 100%)}
+  .nav h1{font-size:1.5rem}
+  .btn{padding:12px 18px;font-size:1.05rem}
+  .btn.large{padding:18px 28px;font-size:1.2rem}
+  .forms{max-width:1200px;margin:0 auto}
+  .products{max-width:1200px;margin:0 auto}
+}

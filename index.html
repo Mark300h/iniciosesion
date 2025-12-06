@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Mayorista de Ropa para Mascotas</title>
+	<link rel="stylesheet" href="css/estilos.css">
+ </head>
+<body>
+	<nav class="nav">
+		<div class="nav-left">
+			<h1>PetWholesale</h1>
+		</div>
+		<div class="nav-right">
+			<button id="btnRegister" class="btn">Crear cuenta</button>
+			<button id="btnLogin" class="btn">Login</button>
+		</div>
+	</nav>
+
+	<div id="message" class="message" aria-live="polite"></div>
+
+	<!-- Formularios (ocultos por defecto) -->
+	<section class="forms">
+		<form id="registerForm" class="form hidden">
+			<h2>Crear cuenta</h2>
+			<label>Nombre completo
+				<input id="regName" type="text" placeholder="Ej. Juan Pérez" required>
+			</label>
+			<label>Nombre de usuario (email)
+				<input id="regEmail" type="email" placeholder="correo@ejemplo.com" required>
+			</label>
+			<label>Numero móvil
+				<input id="regMobile" type="tel" placeholder="+34123456789" required>
+			</label>
+			<label>Contraseña
+				<input id="regPassword" type="password" placeholder="Mín 8, mayúsculas, minúsculas, número y símbolo" required>
+			</label>
+			<label class="showpass"><input type="checkbox" id="regShow"> Mostrar contraseña</label>
+			<button type="submit" class="btn primary">Registrar</button>
+		</form>
+
+		<form id="loginForm" class="form hidden">
+			<h2>Iniciar sesión</h2>
+			<label>Usuario (email)
+				<input id="loginEmail" type="email" placeholder="correo@ejemplo.com" required>
+			</label>
+			<label>Contraseña
+				<input id="loginPassword" type="password" placeholder="Tu contraseña" required>
+			</label>
+			<label class="showpass"><input type="checkbox" id="loginShow"> Mostrar contraseña</label>
+			<button type="submit" class="btn primary">Entrar</button>
+		</form>
+
+		<form id="recoverForm" class="form hidden">
+			<h2>Recuperar / Actualizar contraseña</h2>
+			<label>Nuevo contraseña
+				<input id="newPassword" type="password" placeholder="Mín 8, mayúsculas, minúsculas, número y símbolo" required>
+			</label>
+			<label>Confirmar contraseña
+				<input id="confirmPassword" type="password" placeholder="Repite la nueva contraseña" required>
+			</label>
+			<label class="showpass"><input type="checkbox" id="recoverShow"> Mostrar contraseña</label>
+			<button type="submit" class="btn primary">Actualizar contraseña</button>
+		</form>
+	</section>
+
+	<!-- Hero / Portada -->
+	<header class="hero">
+		<div class="hero-content">
+			<h1>Ropa al por mayor para mascotas</h1>
+			<p>Calidad, variedad y precios competitivos para tiendas y distribuidores.</p>
+		</div>
+	</header>
+
+	<!-- Productos -->
+	<main class="products-section">
+		<h3>Productos destacados</h3>
+		<div class="products">
+			<article class="card">
+				<img src="img/images.jpg" alt="Producto 1">
+				<h4>Sweater pequeño</h4>
+				<p class="price">$5.50</p>
+			</article>
+			<article class="card">
+				<img src="img/images3.jpg" alt="Producto 2">
+				<h4>Capa impermeable</h4>
+				<p class="price">$8.75</p>
+			</article>
+			<article class="card">
+				<img src="img/images (1).jpg" alt="Producto 3">
+				<h4>Bufanda y gorro</h4>
+				<p class="price">$4.20</p>
+			</article>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<p>© 2025 PetWholesale — Venta al por mayor</p>
+	</footer>
+
+	<script src="js/scrip.js"></script>
+</body>
+</html>
